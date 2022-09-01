@@ -40,3 +40,5 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT || PORT, () =>
   console.log("サーバーが起動しました")
 );
+
+process.env.MONGO_URL; // データベース
