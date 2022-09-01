@@ -5,7 +5,7 @@ const { route } = require("./users");
 //ユーザー登録 ( postがフロントから送られた時の処理 )
 router.post("/register", async (req, res) => {
   try {
-    // ① ユーザースキムをインスタンス化
+    // ① ユーザースキムをインスタンス化する
     // ② currentValueのリクエスト情報(オブジェクト)をスキームに代入する
     const newUser = await new User({
       username: req.body.username,
