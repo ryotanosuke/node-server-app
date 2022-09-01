@@ -37,4 +37,6 @@ app.get("/", (req, res) => {
 });
 
 // サーバーの起動確認用
-app.listen(PORT, () => console.log("サーバーが起動しました"));
+app.listen(process.env.PORT || PORT, () =>
+  console.log("サーバーが起動しました")
+);
