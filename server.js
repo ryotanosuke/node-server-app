@@ -12,7 +12,8 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://react-front-app-six.vercel.app/",
+    // 語尾にスラッシュいらない
+    origin: "https://react-front-app-six.vercel.app",
   })
 );
 
