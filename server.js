@@ -8,6 +8,13 @@ const uploadRoute = require("./routes/upload");
 const path = require("path");
 require("dotenv").config();
 const PORT = 5000;
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "https://react-front-app-six.vercel.app/",
+  })
+);
 
 //データベース接続
 mongoose
