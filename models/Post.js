@@ -20,5 +20,5 @@ const PostSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
+//インポートするときPostの名前で取り出す
 module.exports = mongoose.model("Post", PostSchema);

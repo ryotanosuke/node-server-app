@@ -63,7 +63,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// 投稿を取得する
+// 特定の投稿を取得する
 router.get("/:id", async (req, res) => {
   try {
     // postオブジェクトをuserのオブジェクトIDを元に取得
@@ -81,7 +81,7 @@ router.get("/:id", async (req, res) => {
 // 特定のフォロワーにいいねを押す
 router.put("/:id/like", async (req, res) => {
   try {
-    // いいねされるユーザーのIDを検索
+    // いいねされているPostを検索
     // DBのオブジェクトを取得
     const post = await Post.findById(req.params.id);
 

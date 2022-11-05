@@ -54,5 +54,5 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// スキームのエクスポート（ UserをPostメソッドで呼び出す ）
+//インポートするときUserの名前で取り出す
 module.exports = mongoose.model("User", UserSchema);

@@ -4,6 +4,7 @@ const User = require("../models/User");
 // ユーザー情報の更新
 router.put("/:id", async (req, res) => {
   // パラーメーターのidと入力idを確認 (DBのidと比較していないので注意)
+  // shinさんのミスの可能性あり
   if (req.body.userId === req.params.id || req.body.isAdmin) {
     try {
       // 一致するidをDBから検索し、リクエスト情報（$set）を上書き更新
