@@ -10,13 +10,13 @@ require("dotenv").config();
 const PORT = 5000;
 const cors = require("cors");
 
-// app.use(
-//   cors({
-//     // 他サーバーのエンドポイントを許可
-//     // 語尾にスラッシュいらない
-//     origin: "https://react-front-app-six.vercel.app",
-//   })
-// );
+app.use(
+  cors({
+    // 他サーバーのエンドポイントを許可
+    // 語尾にスラッシュいらない
+    origin: "https://react-front-app-six.vercel.app",
+  })
+);
 
 app.use(
   cors({
