@@ -18,13 +18,13 @@ app.use(
   })
 );
 
-app.use(
-  cors({
-    // 他サーバーのエンドポイントを許可
-    // 語尾にスラッシュいらない
-    origin: "http://localhost:3000",
-  })
-);
+// app.use(
+//   cors({
+//     // 他サーバーのエンドポイントを許可
+//     // 語尾にスラッシュいらない
+//     origin: "http://localhost:3000",
+//   })
+// );
 
 //データベース接続
 mongoose
