@@ -10,21 +10,21 @@ require("dotenv").config();
 const PORT = 5000;
 const cors = require("cors");
 
-app.use(
-  cors({
-    // 他サーバーのエンドポイントを許可
-    // 語尾にスラッシュいらない
-    origin: "https://react-front-app-six.vercel.app",
-  })
-);
-
 // app.use(
 //   cors({
 //     // 他サーバーのエンドポイントを許可
 //     // 語尾にスラッシュいらない
-//     origin: "http://localhost:3000",
+//     origin: "https://react-front-app-six.vercel.app",
 //   })
 // );
+
+app.use(
+  cors({
+    // 他サーバーのエンドポイントを許可
+    // 語尾にスラッシュいらない
+    origin: "http://localhost:3000",
+  })
+);
 
 //データベース接続
 mongoose
@@ -42,6 +42,8 @@ mongoose
 app.use(express.json());
 
 //ミドルウェア( 他のファイルを実行 )
+
+// public を省略する記述
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);

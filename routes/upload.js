@@ -4,7 +4,7 @@ const multer = require("multer");
 // どこに保存するか指定
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./public/images");
+    cb(null, "./public/images/");
   },
   filename: (req, file, cb) => {
     cb(null, req.body.name);
@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({
-  storage,
+  storage: storage,
 });
 
 // 画像アップロードAPI
